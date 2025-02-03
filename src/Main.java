@@ -19,6 +19,7 @@ public class Main {
                         case 1 -> System.out.println("Tails");
                     }
                 }
+                break;
             case 2 :
                 int diceTag = 1;
                 System.out.print ("How many faces would you like your dice to have : ");
@@ -29,8 +30,10 @@ public class Main {
                     System.out.println ("Dice " + diceTag + " : Rolled " + rand.nextInt(diceFaceAmount));
                     diceTag++;
                 }
+                break;
             default :
                 System.out.println ("Invalid Option");
+                break;
         }
     }
 }
