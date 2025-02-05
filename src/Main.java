@@ -24,10 +24,14 @@ public class Main {
                 int diceTag = 1;
                 System.out.print ("How many faces would you like your dice to have : ");
                 int diceFaceAmount = userInput.nextInt();
-                System.out.print ("How many dices you would like to roll :");
+                System.out.print ("How many dice you would like to roll : ");
                 int diceRollAmount = userInput.nextInt();
                 for (int j = 0 ; j < diceRollAmount ; j++) {
-                    System.out.println ("Dice " + diceTag + " : Rolled " + rand.nextInt(diceFaceAmount));
+                    int diceValue = rand.nextInt(diceFaceAmount);
+                    if (diceValue == 0) {
+                        diceValue = diceFaceAmount;
+                    }
+                    System.out.println ("Dice " + diceTag + " : Rolled " + diceValue);
                     diceTag++;
                 }
                 break;
